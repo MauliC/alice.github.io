@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Личный сайт студента Geekbrains</title>
+	<link rel="stylesheet" href="style2.css">
+    <script type="text/javascript">
+
+         function PlayGame()
+          {
+             var answer = (Math.random() * 100).toFixed();
+             var player1 = prompt("Игрок 1, введите своё имя:");
+             var player2 = prompt("Игрок 2, введите своё имя:");
+             var n = 1;
+
+             while(true){
+                 if(n == 1){
+                     var playerAnswer = prompt(player1 + ", вводите число:");
+                 }
+                 else{
+                     playerAnswer = prompt(player2 + ", вводите число:");
+                 };
+                 if(playerAnswer == "q")
+                     break;
+                 else if(playerAnswer < answer){ 
+                     alert("К сожалению, вы не угадали, я загадал число побольше. Ход переходит к другому игроку.");
+
+              }  else if(playerAnswer > answer){
+                     alert("К сожалению, вы не угадали, я загадал число поменьше. Ход переходит к другому игроку.");
+              }  else if(playerAnswer == answer){
+                     if (n == 1) {
+                         alert(player1 + ", вы угадали! Поразительная интуиция! :)");
+                     }
+                     else{
+                         alert(player2 + ", вы угадали! Поразительная интуиция! :)");
+                     }
+                     break;
+              }    
+                 if(n == 1){
+                     n++
+                 }
+                 else{
+                     n--
+                 };  
+             }
+             alert("Игра окончена. Хорошего дня!");
+
+          }
+          
+    </script>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">Главная</a><span>/</span>
+        <a href="guess.html">Загадки</a><span>/</span>
+        <a href="ugadaika.html">Угадайка</a><span>/</span>
+        <a href="#">Угадайка на двоих</a>
+    </div>
+    <div id="content">
+        <h1>Игра "Угадайка на двоих"</h1>
+        <div id ="center">
+        <h3>Правила игры: компьютер загадывает число от 1 до 100, ваша задача угадать его быстрее, чем другой игрок. Для выхода нажмите q.</h3>
+            <div id ="box">
+             <a href = "#" onclick = "PlayGame();">Играть!</a>           
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+         <p>Copyright © 2016</p>
+    </div>
+</body>
+</html>

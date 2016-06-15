@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Личный сайт студента Geekbrains</title>
+	<link rel="stylesheet" href="style2.css">
+    <script type="text/javascript">
+    function Play()
+    {
+       var answer = (Math.random() * 100).toFixed();
+       var i = 0
+       while(i < 8){
+            i++
+            var number = prompt("Вводите число:");
+       
+            if(number == "q")
+              break;
+            else if(number < answer){ 
+             alert("К сожалению, вы не угадали, я загадал число побольше. Введите другое число.");
+         }  else if(number > answer){
+             alert("К сожалению, вы не угадали, я загадал число поменьше. Введите другое число.");
+         }  else if(number == answer){
+             alert("Поздравляю, вы угадали! Поразительная интуиция! :)");
+            break;
+         }   
+    }
+     if(i == 8){
+      alert("Увы, вы проиграли.")
+     }
+    alert("Игра окончена. Хорошего дня!")
+}
+    </script>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">Главная</a><span>/</span>
+        <a href="guess.html">Загадки</a><span>/</span>
+        <a href="#">Угадайка</a><span>/</span>
+        <a href="ugadaika2.html">Угадайка на двоих</a>
+    </div>
+    <div id="content">
+        <h1>Игра "Угадайка"</h1>
+        <div id ="center">
+        <h3>Правила игры: компьютер загадывает число от 1 до 100, ваша задача угадать его за 8 попыток. Для выхода нажмите q.</h3>
+            <div id ="box">
+             <a href = "#" onclick = "Play();">Играть!</a>           
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+         <p>Copyright © 2016</p>
+    </div>
+</body>
+</html>

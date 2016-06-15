@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style2.css">
+    <script type="text/javascript">
+
+        var result = 0;
+
+        function Question(textBoxId, answer)
+        {
+            var userAnswer = document.getElementById(textBoxId).value;
+            userAnswer = userAnswer.toLowerCase();
+            if(userAnswer == answer)
+                result++;
+
+        }
+
+        function Questions()
+        {
+           Question("answer1", "осень");
+           Question("answer2", "холодильник");
+           Question("answer3", "топор");
+           Question("answer4", "стрекоза");
+        
+           if(result == 0)
+             alert("К сожалению, вы не угадали ни одной загадки.");
+           else if(result == 1)
+             alert("Вы угадали только одну загадку.");
+           else
+             alert("Поздравляем, вы отгадали целых " + result + " загадки!");
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">Главная</a><span>/</span>
+        <a href="#">Загадки</a><span>/</span>
+        <a href="ugadaika.html">Угадайка</a><span>/</span>
+        <a href="ugadaika2.html">Угадайка на двоих</a>
+    </div>
+<div id="content">
+    <h1>Загадки</h1>
+    <div id="center">
+        <h3>Отгадай загадки!</h3>
+        <div id="box">
+            <h5>Впиши ответы в поля ниже.</h5>
+            <p>Несу я урожаи,<br><br/>Поля вновь засеваю,<br><br/>Птиц к югу отправляю,<br><br/>Деревья раздеваю.</p>
+            <input type="text" id="answer1">
+            <p>Посмотри-ка, что за дом -<br><br/>Даже летом стужа в нём!</p>
+            <input type="text" id="answer2">
+            <p>Хоть он ростом невелик,<br><br/>А к почтению привык:<br><br/>Перед ним дубы, и клёны,<br><br/>И берёзы бьют поклоны.</p>
+            <input type="text" id="answer3">
+            <p>Шелестящий вертолёт<br><br/>Вдруг отправился в полёт.<br><br/>Он над лугом полетал,<br><br/>На цветочках отдыхал.</p> 
+            <input type="text" id="answer4">
+            <br><br/>
+            <a href = "#" onclick = "Questions();">Проверить ответы</a>
+        </div>
+</div>
+<div class="footer">
+    Copyright © 2016
+</div>
+
+</body>
+</html>
